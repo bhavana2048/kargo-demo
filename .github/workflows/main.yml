@@ -37,8 +37,6 @@ jobs:
       
       - name: Print global env
         run: echo "Global message:$GLOBAL_MESSAGE"
-
-  # ───────────────────────────────
   run:
     name: Build Job (with Matrix)
     runs-on: ubuntu-latest
@@ -57,7 +55,6 @@ jobs:
       - name: Simulate build step
         run: echo "Building project for ${{ matrix.os }} and Node version ${{ matrix.node-version }}"
 
-  # ───────────────────────────────
   test:
     name: Test Job
     runs-on: ubuntu-latest
@@ -71,8 +68,6 @@ jobs:
           echo "Running test step 1"
           echo "Running test step 2"
           echo "All tests passed successfully!"
-
-  # ───────────────────────────────
   deploy:
     name: Deploy Job
     runs-on: ubuntu-latest
@@ -96,3 +91,4 @@ jobs:
         with:
           name: sample-artifact
           path: doc/sample_output.txt
+
