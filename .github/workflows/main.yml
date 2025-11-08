@@ -82,6 +82,7 @@ jobs:
 
       - name: Create a random text file
         run: |
+          mkdir doc
           echo "This is a sample artifact file generated at $(date)" > doc/sample_output.txt
           echo "Previous job result: ${{ needs.run.result }}" >> doc/sample_output.txt
           echo "Environment: ${{ github.event.inputs.environment }}" >> doc/sample_output.txt
