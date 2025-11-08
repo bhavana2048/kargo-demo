@@ -33,7 +33,7 @@ jobs:
         run: echo "Workflow triggered by ${{ github.event_name }}"
       
       - name: Print input environment
-        run: echo "echo "Running in environment:${{ github.event.inputs.environment }}"
+        run: echo "Running in environment:${{ github.event.inputs.environment }}"
       
       - name: Print global env
         run: echo "Global message:$GLOBAL_MESSAGE"
